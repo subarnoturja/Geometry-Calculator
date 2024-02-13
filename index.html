@@ -63,9 +63,20 @@
                     <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Parallelogram</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p class="text-2xl">Area(A) = b X h</p>
+                      <div class="flex ">
+                        <!-- Base -->
+                        <input id="parallelogram-base" type="text" class="w-24 text-2xl p-2 rounded-sm" placeholder="b">
+                        <span class="mr-4 ml-2">cm</span>
+                        <!-- Height -->
+                        <input id="parallelogram-height" type="text" class="w-24 text-2xl p-2 rounded-sm" placeholder="h">
+                        <span>cm</span>
+                      </div>
+                      <div>
+                        <p class="text-2xl">Area: <span id="parallelogram-area"></span> <span>cm<sup>2</sup></span></p>
+                      </div>
                       <div class="card-actions">
-                        <button class="btn btn-primary w-full">Buy Now</button>
+                        <button onclick="calculateParallelogramArea()" class="btn btn-primary w-full">Calculate</button>
                       </div>
                     </div>
                   </div>  
@@ -79,7 +90,27 @@
                         <button class="btn btn-primary">Buy Now</button>
                       </div>
                     </div>
-                  </div>  
+                </div>
+                  <!-- Pentagon card -->
+                  <div class="card w-80 bg-base-100 shadow-xl">
+                    <figure><img src="images/pentagon.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title text-center">Pentagon</h2>
+                      <p class="text-center">Area = 0.5 X p X b</p>
+                      <div class="">
+                        <input id="pentagon-p" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="b">
+                        <span class="mr-4 ml-2">cm</span>
+                        <input id="pentagon-base" class="w-24 text-2xl p-2 rounded-sm type="text" placeholder="h">
+                        <span>cm</span>
+                      </div>
+                      <div>
+                        <p class="text-2xl">Area: <span id="pentagon-area"></span><span>cm<sup>2</sup></sup></span></p>
+                      </div>
+                      <div class="card-actions">
+                        <button onclick="calculatePentagonArea()" class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div> 
             </div>
             <!-- Area calculation container -->
             <div class="w-96 border-2 border-gray-700 rounded-md">
@@ -89,5 +120,6 @@
     </main>
     <script src="scripts/triangle-calculate.js"></script>
     <script src="scripts/rectangle-calculate.js"></script>
+    <script src="scripts/parallelogra-calculate.js"></script>
 </body>
 </html>
